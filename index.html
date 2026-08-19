@@ -19,19 +19,18 @@ html{
 
 body{
   font-family:Arial,sans-serif;
-  background:#fff8fa;
-  color:#593d45;
+  background:#F7F3EA;
+  color:#26364A;
 }
 
 /* TOP BAR */
-
-.top{
-  background:#8f4b5e;
-  color:white;
+  .top{
+    background:#72B9D6;
+  color:#234A68;
   text-align:center;
   padding:8px;
   font-size:13px;
-}
+  }
 
 /* HEADER */
 
@@ -45,7 +44,8 @@ header{
   background:
     radial-gradient(circle at 20% 20%,#f7d4df 0,transparent 30%),
     radial-gradient(circle at 80% 70%,#e9b3c3 0,transparent 30%),
-    linear-gradient(135deg,#fff1f5,#f5d0da);
+  linear-gradient(135deg,#D9F3F0,#8FD3D1,#4FA7A5);
+  
   position:relative;
   overflow:hidden;
 }
@@ -60,7 +60,8 @@ header{
 }
 
 header h1{
-  color:#803b50;
+
+  color:#26384A;
   font-family:Georgia,serif;
   font-size:42px;
   margin-bottom:15px;
@@ -120,7 +121,7 @@ section{
 .title{
   text-align:center;
   font-family:Georgia,serif;
-  color:#873f55;
+  color:#234A68;
   font-size:31px;
   margin-bottom:10px;
 }
@@ -170,7 +171,7 @@ section{
 }
 
 .card h3{
-  color:#853f55;
+  color:#234A68;
   margin-bottom:12px;
   font-family:Georgia,serif;
 }
@@ -194,7 +195,7 @@ section{
 }
 
 .feature h3{
-  color:#803b50;
+  color:#234A68;
   font-family:Georgia,serif;
   font-size:27px;
   margin-bottom:15px;
@@ -224,7 +225,7 @@ section{
   color:white;
   font-family:Georgia,serif;
   font-size:22px;
-  background:linear-gradient(135deg,#d99aaa,#9f5269);
+    background:linear-gradient(135deg,#18243a,#30476b);
   box-shadow:0 10px 30px rgba(130,60,80,.18);
   position:relative;
   overflow:hidden;
@@ -258,12 +259,12 @@ section{
   font-size:12px;
   font-family:Arial,sans-serif;
 }
-.gallery-box:nth-child(2){
-  background:linear-gradient(135deg,#e9b7c5,#b66d7e);
-}
-
+.gallery-box:nth-child(2)
+  .gallery-box:nth-child(2){
+  background:linear-gradient(135deg,#24344f,#50698f);
+  }
 .gallery-box:nth-child(3){
-  background:linear-gradient(135deg,#d8a0b0,#8e485e);
+  background:linear-gradient(135deg,#101a2b,#3d536f);
 }
 
 /* WHY US */
@@ -383,7 +384,7 @@ input:focus,select:focus{
 /* FOOTER */
 
 footer{
-  background:#813d52;
+  background:linear-gradient(135deg,#87CEEB,#5DADE2);
   color:white;
   text-align:center;
   padding:30px 15px;
@@ -780,11 +781,129 @@ footer{
   box-shadow:0 5px 18px rgba(130,60,80,.25);
   z-index:998;
   }
+  /* EXTRA MOBILE DESIGN */
+
+@media (max-width:600px){
+
+  header{
+    min-height:560px;
+    padding:40px 20px;
+  }
+
+  header h1{
+    font-size:32px;
+    line-height:1.3;
+  }
+
+  .subtitle{
+    font-size:14px;
+    letter-spacing:1.5px;
+  }
+
+  .hero-text{
+    font-size:15px;
+    line-height:1.7;
+  }
+
+  nav{
+    padding:13px 5px;
+    overflow-x:auto;
+  }
+
+  nav a{
+    font-size:13px;
+    margin:0 7px;
+  }
+
+  section{
+    padding:50px 16px;
+  }
+
+  .title{
+    font-size:28px;
+    line-height:1.3;
+  }
+
+  .services{
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+
+  .card{
+    padding:24px 10px;
+    min-height:155px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .gallery-box{
+    min-height:250px;
+  }
+
+  .about-box,
+  .feature,
+  .booking{
+    padding:28px 18px;
+  }
+
+  .why{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .reviews{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  input,
+  select{
+    font-size:16px;
+    padding:14px;
+  }
+
+  .book{
+    padding:16px;
+    font-size:16px;
+  }
+
+}
+  .language-switch{
+  position:fixed;
+  top:10px;
+  right:10px;
+  z-index:1001;
+  display:flex;
+  gap:5px;
+}
+
+.language-switch button{
+  border:none;
+  padding:7px 10px;
+  border-radius:20px;
+  background:white;
+  color:#8f4b5e;
+  font-size:12px;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.language-switch button:hover{
+  background:#8f4b5e;
+  color:white;
+}
 </style>
 </head>
 
 <body>
-
+<div class="language-switch">
+  <button onclick="setLanguage('te')">తెలుగు</button>
+  <button onclick="setLanguage('en')">English</button>
+</div>
 <div class="top">
 ✨ New Velmal • Beauty & Bridal Specialist ✨
 </div>
@@ -794,21 +913,31 @@ footer{
   <div class="hero-content">
 
     <div class="crown">👑</div>
+    <h1 data-en="Haritha's Bridal & Beauty Care"
+    data-te="హారితాస్ బ్రైడల్ & బ్యూటీ కేర్">
+  హారితాస్ బ్రైడల్ & బ్యూటీ కేర్
+    </h1>
 
-    <h1>Haritha's Bridal & Beauty Care</h1>
 
-    <div class="subtitle">
-      BEAUTY • BRIDAL • ELEGANCE
-    </div>
+    <div class="subtitle"
+     data-en="BEAUTY • BRIDAL • ELEGANCE"
+     data-te="అందం • వధువు అలంకరణ • సొగసు">
+  అందం • వధువు అలంకరణ • సొగసు
+</div>
 
-    <p class="hero-text">
-      Welcome to your beauty destination.
-      Feel confident, beautiful and special on every occasion.
-    </p>
+<p class="hero-text"
+   data-en="Welcome to your beauty destination. Feel confident, beautiful and special on every occasion."
+   data-te="మీ అందం కోసం మా ప్రత్యేక ప్రపంచానికి స్వాగతం. ప్రతి సందర్భంలో ఆత్మవిశ్వాసంతో, అందంగా మరియు ప్రత్యేకంగా అనుభూతి చెందండి.">
+  మీ అందం కోసం మా ప్రత్యేక ప్రపంచానికి స్వాగతం.
+  ప్రతి సందర్భంలో ఆత్మవిశ్వాసంతో, అందంగా మరియు ప్రత్యేకంగా అనుభూతి చెందండి.
+</p>
 
-    <a href="#booking" class="main-btn">
-      Book Your Appointment
-    </a>
+<a href="#booking"
+   class="main-btn"
+   data-en="Book Your Appointment"
+   data-te="మీ అపాయింట్‌మెంట్ బుక్ చేసుకోండి">
+  మీ అపాయింట్‌మెంట్ బుక్ చేసుకోండి
+</a>
 
   </div>
 
@@ -825,40 +954,91 @@ footer{
 
 <section id="services">
 
-  <h2 class="title">Our Beauty Services</h2>
+  <h2 class="title"
+    data-en="Our Beauty Services"
+    data-te="మా బ్యూటీ సేవలు">
+  మా బ్యూటీ సేవలు
+  </h2>
   <div class="line"></div>
-
-  <p class="intro">
-    Professional beauty care designed to make you
-    feel confident, elegant and beautiful.
+  <p
+  data-en="Professional beauty care designed to make you feel confident. Elegant and Beautiful."
+  data-te="మీకు ఆత్మవిశ్వాసాన్ని కలిగించేలా రూపొందించిన ప్రొఫెషనల్ బ్యూటీ కేర్. సొగసు మరియు అందం.">
+  మీకు ఆత్మవిశ్వాసాన్ని కలిగించేలా రూపొందించిన ప్రొఫెషనల్ బ్యూటీ కేర్.
+  సొగసు మరియు అందం.
   </p>
+
 
   <div class="services">
 
     <div class="card">
       <div class="icon">👰</div>
-      <h3>Bridal Makeup</h3>
+      <h3 data-en="Bridal Makeup" data-te="బ్రైడల్ మేకప్">
+  బ్రైడల్ మేకప్
+      </h3>
       <div class="price">₹3,000</div>
     </div>
 
     <div class="card">
       <div class="icon">💇‍♀️</div>
-      <h3>Hair Styling</h3>
+      <h3 data-en="Hair Styling" data-te="హెయిర్ స్టైలింగ్">
+  హెయిర్ స్టైలింగ్
+      </h3>
       <div class="price">₹500</div>
     </div>
 
     <div class="card">
       <div class="icon">✨</div>
-      <h3>Facial</h3>
+      <h3 data-en="Facial" data-te="ఫేషియల్">
+  ఫేషియల్
+      </h3>
       <div class="price">₹700</div>
     </div>
 
     <div class="card">
       <div class="icon">💅</div>
-      <h3>Manicure & Pedicure</h3>
+      <h3 data-en="Manicure & Pedicure" data-te="మ్యానిక్యూర్ & పెడిక్యూర్">
+  మ్యానిక్యూర్ & పెడిక్యూర్
+      </h3>
       <div class="price">₹1,000</div>
     </div>
+<div class="card">
+  <div class="icon">🧴</div>
+  <h3 data-en="Wax" data-te="వాక్సింగ్">
+    వాక్సింగ్
+  </h3>
+  <div class="price">₹400</div>
+</div>
 
+<div class="card">
+  <div class="icon">🌿</div>
+  <h3 data-en="Henna" data-te="మెహందీ">
+    మెహందీ
+  </h3>
+  <div class="price">₹200</div>
+</div>
+
+<div class="card">
+  <div class="icon">✨</div>
+  <h3 data-en="Eyebrows" data-te="కనుబొమ్మలు">
+    కనుబొమ్మలు
+  </h3>
+  <div class="price">₹100</div>
+</div>
+    <div class="card">
+  <div class="icon">👗</div>
+  <h3 data-en="Saree Draping" data-te="చీర కట్టడం">
+    చీర కట్టడం
+  </h3>
+  <div class="price">₹700</div>
+</div>
+
+<div class="card">
+  <div class="icon">✂️</div>
+  <h3 data-en="Hair Cutting" data-te="హెయిర్ కట్టింగ్">
+    హెయిర్ కట్టింగ్
+  </h3>
+  <div class="price">₹300</div>
+</div>
   </div>
 
 </section>
@@ -866,14 +1046,20 @@ footer{
 <section>
 
   <div class="feature">
+    <h3
+  data-en="👰 Luxury Bridal Experience"
+  data-te="👰 ప్రత్యేక బ్రైడల్ అనుభవం">
+  👰 ప్రత్యేక బ్రైడల్ అనుభవం
+</h3>
 
-    <h3>👰 Luxury Bridal Experience</h3>
+<p
+  data-en="Your wedding day deserves something special. Enjoy beautiful bridal makeup, elegant hair styling and personalized beauty care for your special occasion."
+  data-te="మీ పెళ్లి రోజు ప్రత్యేకమైనది. అందమైన బ్రైడల్ మేకప్, సొగసైన హెయిర్ స్టైలింగ్ మరియు మీ ప్రత్యేక సందర్భానికి తగిన వ్యక్తిగత బ్యూటీ కేర్‌ను ఆస్వాదించండి.">
+  మీ పెళ్లి రోజు ప్రత్యేకమైనది.
+  అందమైన బ్రైడల్ మేకప్, సొగసైన హెయిర్ స్టైలింగ్ మరియు
+  మీ ప్రత్యేక సందర్భానికి తగిన వ్యక్తిగత బ్యూటీ కేర్‌ను ఆస్వాదించండి.
+</p>
 
-    <p>
-      Your wedding day deserves something special.
-      Enjoy beautiful bridal makeup, elegant hair styling
-      and personalized beauty care for your special occasion.
-    </p>
 
   </div>
 
@@ -881,7 +1067,11 @@ footer{
   
 <section id="about"class="about">
 
-  <h2 class="title">About Haritha's Beauty Care</h2>
+  <h2 class="title"
+    data-en="About Haritha's Beauty Care"
+    data-te="హారితాస్ బ్యూటీ కేర్ గురించి">
+  హారితాస్ బ్యూటీ కేర్ గురించి
+  </h2>
   <div class="line"></div>
 
   <div class="about-box">
@@ -890,22 +1080,32 @@ footer{
 
     <h3>Beauty With Elegance</h3>
 
-    <p>
-      Welcome to Haritha's Bridal & Beauty Care,
-      your trusted destination for beautiful bridal
-      makeup and professional beauty services.
+    <p
+  data-en="Welcome to Haritha's Bridal & Beauty Care, your trusted destination for beautiful bridal makeup and professional beauty services."
+  data-te="హారితాస్ బ్రైడల్ & బ్యూటీ కేర్‌కు స్వాగతం. అందమైన బ్రైడల్ మేకప్ మరియు ప్రొఫెషనల్ బ్యూటీ సేవలకు మీ నమ్మకమైన చిరునామా మా బ్యూటీ కేర్.">
+  హారితాస్ బ్రైడల్ & బ్యూటీ కేర్‌కు స్వాగతం.
+  అందమైన బ్రైడల్ మేకప్ మరియు ప్రొఫెషనల్ బ్యూటీ సేవలకు
+  మీ నమ్మకమైన చిరునామా మా బ్యూటీ కేర్.
     </p>
-
-    <p>
-      We believe every woman deserves to feel confident,
-      beautiful and special. Our services are designed
-      with care, elegance and personal attention.
-    </p>
+<p
+  data-en="We believe every woman deserves to feel confident, beautiful and special. Our services are designed with care, elegance and personal attention."
+  data-te="ప్రతి మహిళ ఆత్మవిశ్వాసంతో, అందంగా మరియు ప్రత్యేకంగా అనుభూతి చెందాలని మేము కోరుకుంటాము. మా సేవలను శ్రద్ధ, సొగసు మరియు వ్యక్తిగత శ్రద్ధతో అందిస్తున్నాము.">
+  ప్రతి మహిళ ఆత్మవిశ్వాసంతో, అందంగా మరియు ప్రత్యేకంగా
+  అనుభూతి చెందాలని మేము కోరుకుంటాము.
+  మా సేవలను శ్రద్ధ, సొగసు మరియు వ్యక్తిగత శ్రద్ధతో అందిస్తున్నాము.
+</p>
+  
 
     <div class="about-features">
-      <span>✨ Professional Care</span>
-      <span>🌹 Elegant Beauty</span>
-      <span>💗 Personal Attention</span>
+      <span data-en="✨ Professional Care" data-te="✨ ప్రొఫెషనల్ కేర్">
+  ✨ ప్రొఫెషనల్ కేర్
+      </span>
+      <span data-en="🌹 Elegant Beauty" data-te="🌹 అందమైన సొగసు">
+  🌹 అందమైన సొగసు
+      </span>
+      <span data-en="💗 Personal Attention" data-te="💗 వ్యక్తిగత శ్రద్ధ">
+  💗 వ్యక్తిగత శ్రద్ధ
+      </span>
     </div>
 
   </div>
@@ -913,20 +1113,27 @@ footer{
 </section>
   <section id="gallery">
 
-  <h2 class="title">Luxury Beauty Gallery</h2>
+    <h2 class="title"
+    data-en="Luxury Beauty Gallery"
+    data-te="లగ్జరీ బ్యూటీ గ్యాలరీ">
+  లగ్జరీ బ్యూటీ గ్యాలరీ
+    </h2>
 
   <div class="line"></div>
-
-  <p class="intro">
-    Discover our bridal beauty, hair styling and beauty care experience.
-  </p>
+<p
+  data-en="Explore our beautiful bridal looks, hair styling and beauty care services."
+  data-te="మా అందమైన బ్రైడల్ లుక్స్, హెయిర్ స్టైలింగ్ మరియు బ్యూటీ కేర్ సేవలను చూడండి.">
+  మా అందమైన బ్రైడల్ లుక్స్, హెయిర్ స్టైలింగ్ మరియు బ్యూటీ కేర్ సేవలను చూడండి.
+</p>
 
   <div class="gallery">
 
     <div class="gallery-box bridal-photo">
       <div>
         <div class="gallery-icon">👰🏻‍♀️</div>
-        <strong>Bridal Makeup</strong>
+        <strong data-en="Bridal Makeup" data-te="బ్రైడల్ మేకప్">
+  బ్రైడల్ మేకప్
+        </strong>
         <small>Elegant • Glamorous • Beautiful</small>
       </div>
     </div>
@@ -934,7 +1141,9 @@ footer{
     <div class="gallery-box hair-photo">
       <div>
         <div class="gallery-icon">💇🏻‍♀️</div>
-        <strong>Hair Styling</strong>
+        <strong data-en="Hair Styling" data-te="హెయిర్ స్టైలింగ్">
+  హెయిర్ స్టైలింగ్
+        </strong>
         <small>Style • Shine • Elegance</small>
       </div>
     </div>
@@ -942,75 +1151,179 @@ footer{
     <div class="gallery-box beauty-photo">
       <div>
         <div class="gallery-icon">✨</div>
-        <strong>Beauty Care</strong>
+        <strong data-en="Beauty Care" data-te="బ్యూటీ కేర్">
+  బ్యూటీ కేర్
+        </strong>
         <small>Glow • Care • Confidence</small>
       </div>
 
   </div>
+    <div class="gallery-box">
+  <div class="gallery-content">
+    <div class="gallery-icon">🧴</div>
+    <h3 data-en="Waxing" data-te="వాక్సింగ్">వాక్సింగ్</h3>
+    <p data-en="Smooth & Beautiful"
+       data-te="మృదువైన మరియు అందమైన">
+      మృదువైన మరియు అందమైన
+    </p>
+  </div>
+    </div>
+        <div class="gallery-box">
+      <div class="gallery-content">
+        <div class="gallery-icon">🌿</div>
+
+        <h3 data-en="Henna" data-te="మెహందీ">
+          మెహందీ
+        </h3>
+
+        <p data-en="Beautiful Henna Designs"
+           data-te="అందమైన మెహందీ డిజైన్లు">
+          అందమైన మెహందీ డిజైన్లు
+        </p>
+      </div>
+        </div>
+    <div class="gallery-box">
+  <div class="gallery-content">
+    <div class="gallery-icon">✨</div>
+
+    <h3 data-en="Eyebrows" data-te="కనుబొమ్మలు">
+      కనుబొమ్మలు
+    </h3>
+
+    <p data-en="Perfect Brow Shape"
+       data-te="అందమైన కనుబొమ్మల ఆకృతి">
+      అందమైన కనుబొమ్మల ఆకృతి
+    </p>
+  </div>
+    </div>
+    <div class="gallery-box">
+  <div class="gallery-content">
+    <div class="gallery-icon">👗</div>
+
+    <h3 data-en="Saree Draping" data-te="చీర కట్టడం">
+      చీర కట్టడం
+    </h3>
+
+    <p data-en="Elegant Traditional Draping"
+       data-te="అందమైన సంప్రదాయ చీర కట్టడం">
+      అందమైన సంప్రదాయ చీర కట్టడం
+    </p>
+  </div>
+    </div>
+    <div class="gallery-box">
+  <div class="gallery-content">
+    <div class="gallery-icon">✂️</div>
+
+    <h3 data-en="Hair Cutting" data-te="హెయిర్ కట్టింగ్">
+      హెయిర్ కట్టింగ్
+    </h3>
+
+    <p data-en="Professional Hair Cut"
+       data-te="ప్రొఫెషనల్ హెయిర్ కట్టింగ్">
+      ప్రొఫెషనల్ హెయిర్ కట్టింగ్
+    </p>
+  </div>
+    </div>
   </div>
 
   </section>
 
 
 <section>
-
-  <h2 class="title">Why Choose Us?</h2>
+  <h2 class="title"
+    data-en="Why Choose Us?"
+    data-te="మమ్మల్ని ఎందుకు ఎంచుకోవాలి?">
+  మమ్మల్ని ఎందుకు ఎంచుకోవాలి?
+  </h2>
   <div class="line"></div>
 
   <div class="why">
 
     <div class="why-box">
       <div class="icon">✨</div>
-      <h3>Professional Care</h3>
-      <p>Personal attention for every customer.</p>
+      <h3 data-en="Professional Care" data-te="ప్రొఫెషనల్ కేర్">
+  ప్రొఫెషనల్ కేర్
+      </h3>
+      <p
+  data-en="Personal attention for every customer."
+  data-te="ప్రతి కస్టమర్‌కు వ్యక్తిగత శ్రద్ధ.">
+  ప్రతి కస్టమర్‌కు వ్యక్తిగత శ్రద్ధ.
+      </p>
     </div>
 
     <div class="why-box">
       <div class="icon">🌸</div>
-      <h3>Beauty & Elegance</h3>
-      <p>Make every occasion special and beautiful.</p>
+      <h3 data-en="Beauty & Elegance" data-te="అందం & సొగసు">
+  అందం & సొగసు
+      </h3>
+      <p
+  data-en="Make every occasion special and beautiful."
+  data-te="ప్రతి సందర్భాన్ని ప్రత్యేకంగా మరియు అందంగా మార్చండి.">
+  ప్రతి సందర్భాన్ని ప్రత్యేకంగా మరియు అందంగా మార్చండి.
+      </p>
     </div>
     <div class="why-box">
       <div class="icon">💗</div>
-      <h3>Customer Care</h3>
-      <p>Your comfort and satisfaction matter to us.</p>
+      <h3 data-en="Customer Care" data-te="కస్టమర్ కేర్">
+  కస్టమర్ కేర్
+      </h3>
+      <p
+  data-en="Your comfort and satisfaction matter to us."
+  data-te="మీ సౌకర్యం మరియు సంతృప్తి మాకు ఎంతో ముఖ్యం.">
+  మీ సౌకర్యం మరియు సంతృప్తి మాకు ఎంతో ముఖ్యం.
+      </p>
     </div>
 
   </div>
 
 </section>
   <section>
+    <h2 class="title"
+    data-en="What Our Customers Say"
+    data-te="మా కస్టమర్లు ఏమంటున్నారు">
+  మా కస్టమర్లు ఏమంటున్నారు
+    </h2>
 
-  <h2 class="title">What Our Customers Say</h2>
   <div class="line"></div>
 
   <div class="reviews">
 
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>
-        "Beautiful bridal makeup and very friendly service.
-        I loved the overall experience!"
+      <p
+  data-en="Beautiful bridal makeup and very friendly service. I loved the overall experience!"
+  data-te="అందమైన బ్రైడల్ మేకప్ మరియు చాలా స్నేహపూర్వక సేవ. నాకు మొత్తం అనుభవం చాలా నచ్చింది!">
+  అందమైన బ్రైడల్ మేకప్ మరియు చాలా స్నేహపూర్వక సేవ.
+  నాకు మొత్తం అనుభవం చాలా నచ్చింది!
       </p>
       <strong>— Happy Bride</strong>
     </div>
 
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>
-        "Very nice hair styling and beauty care.
-        Highly recommended!"
+      <p
+  data-en="Very nice hair styling and beauty care. Highly recommended!"
+  data-te="చాలా మంచి హెయిర్ స్టైలింగ్ మరియు బ్యూటీ కేర్. తప్పకుండా సిఫారసు చేస్తాను!">
+  చాలా మంచి హెయిర్ స్టైలింగ్ మరియు బ్యూటీ కేర్.
+  తప్పకుండా సిఫారసు చేస్తాను!
       </p>
       <strong>— Happy Customer</strong>
     </div>
 
     <div class="review">
       <div class="stars">★★★★★</div>
-      <p>
-        "Professional service and personal attention.
-        Wonderful beauty experience."
+      <p
+  data-en="Professional service and personal attention. Wonderful beauty experience."
+  data-te="ప్రొఫెషనల్ సేవ మరియు వ్యక్తిగత శ్రద్ధ. అద్భుతమైన బ్యూటీ అనుభవం.">
+  ప్రొఫెషనల్ సేవ మరియు వ్యక్తిగత శ్రద్ధ.
+  అద్భుతమైన బ్యూటీ అనుభవం.
       </p>
-      <strong>— Happy Customer</strong>
+      <strong data-en="— Happy Bride" data-te="— సంతోషమైన వధువు">
+  — సంతోషమైన వధువు
+      </strong>
+      <strong data-en="— Happy Customer" data-te="— సంతోషమైన కస్టమర్">
+  — సంతోషమైన కస్టమర్
+      </strong>
     </div>
 
   </div>
@@ -1018,23 +1331,28 @@ footer{
   </section>
 
 <section id="booking">
-
-  <h2 class="title">Book Your Appointment</h2>
+  <h2 class="title"
+    data-en="Book Your Appointment"
+    data-te="మీ అపాయింట్‌మెంట్ బుక్ చేసుకోండి">
+  మీ అపాయింట్‌మెంట్ బుక్ చేసుకోండి
+  </h2>
   <div class="line"></div>
 
   <div class="booking">
 
     <form id="bookingForm">
-      <label>Your Name</label>
+      <label data-en="Your Name" data-te="మీ పేరు">
+  మీ పేరు
+      </label>
 <input
   type="text"
   id="name"
   placeholder="Enter your name"
   required
 >
-
-
-      <label>Phone Number</label>
+<label data-en="Phone Number" data-te="ఫోన్ నంబర్">
+  ఫోన్ నంబర్
+</label>
 <input
   type="tel"
   id="phone"
@@ -1044,25 +1362,87 @@ footer{
   placeholder="Enter 10-digit number"
   required
 >
-      <label>Appointment Date</label>
+  <label data-en="Appointment Date" data-te="అపాయింట్‌మెంట్ తేదీ">
+  అపాయింట్‌మెంట్ తేదీ
+  </label>
       <input type="date" id="date" required>
-      <label>Appointment Time</label>
+      <label data-en="Appointment Time" data-te="అపాయింట్‌మెంట్ సమయం">
+  అపాయింట్‌మెంట్ సమయం
+      </label>
 <input type="time" id="time" min="09:00" max="20:00" required>
-
-      <label>Select Service</label>
+<label data-en="Select Service" data-te="సేవను ఎంచుకోండి">
+  సేవను ఎంచుకోండి
+</label>
       <select id="service" required>
 
   <option value="" disabled selected>Select a service</option>
-  <option>Bridal Makeup</option>
-  <option>Hair Styling</option>
-  <option>Facial</option>
-  <option>Manicure & Pedicure</option>
+        <option value="" disabled selected
+  data-en="Select a service"
+  data-te="సేవను ఎంచుకోండి">
+  సేవను ఎంచుకోండి
+</option>
 
+<option
+  data-en="Bridal Makeup"
+  data-te="బ్రైడల్ మేకప్">
+  బ్రైడల్ మేకప్
+</option>
+
+<option
+  data-en="Hair Styling"
+  data-te="హెయిర్ స్టైలింగ్">
+  హెయిర్ స్టైలింగ్
+</option>
+
+<option
+  data-en="Facial"
+  data-te="ఫేషియల్">
+  ఫేషియల్
+</option>
+
+<option
+  data-en="Manicure & Pedicure"
+  data-te="మ్యానిక్యూర్ & పెడిక్యూర్">
+  మ్యానిక్యూర్ & పెడిక్యూర్
+</option>
+        <option value="Waxing"
+        data-en="Waxing"
+        data-te="వాక్సింగ్">
+  వాక్సింగ్
+</option>
+
+<option value="Henna"
+        data-en="Henna"
+        data-te="మెహందీ">
+  మెహందీ
+</option>
+
+<option value="Eyebrows"
+        data-en="Eyebrows"
+        data-te="కనుబొమ్మలు">
+  కనుబొమ్మలు
+</option>
+
+<option value="Saree Draping"
+        data-en="Saree Draping"
+        data-te="చీర కట్టడం">
+  చీర కట్టడం
+</option>
+
+<option value="Hair Cutting"
+        data-en="Hair Cutting"
+        data-te="హెయిర్ కట్టింగ్">
+  హెయిర్ కట్టింగ్
+</option>
       </select>
-
-      <button class="book" type="submit">
-        💬 Book Now on WhatsApp
-      </button>
+<button
+  class="book"
+  type="submit"
+  data-en="💬 Book Now on WhatsApp"
+  data-te="💬 WhatsAppలో బుక్ చేయండి">
+  💬 WhatsAppలో బుక్ చేయండి
+</button>
+  
 
     </form>
 
@@ -1073,68 +1453,99 @@ footer{
 </section>
 
 <section>
-
-  <h2 class="title">Opening Hours</h2>
+<h2 class="title"
+    data-en="Opening Hours"
+    data-te="పని వేళలు">
+  పని వేళలు
+</h2>
   <div class="line"></div>
 
   <div class="hours">
+<strong
+  data-en="Monday - Sunday"
+  data-te="సోమవారం - ఆదివారం">
+  సోమవారం - ఆదివారం
+</strong><br>
 
-    🕘 <strong>Monday - Sunday</strong><br>
-    9:00 AM - 8:00 PM
+<span
+  data-en="9:00 AM - 8:00 PM"
+  data-te="ఉదయం 9:00 - రాత్రి 8:00">
+  ఉదయం 9:00 - రాత్రి 8:00
+</span>
 
   </div>
 
 </section>
 
 <section id="contact">
+  <h2 class="title"
+    data-en="Contact Us"
+    data-te="మమ్మల్ని సంప్రదించండి">
+  మమ్మల్ని సంప్రదించండి
+  </h2>
 
-  <h2 class="title">Contact Us</h2>
   <div class="line"></div>
 
   <div class="contact">
-
-    <p>
-      📞 Call or WhatsApp us for appointments
-    </p>
-<p class="location">
-  📍 New Velmal, Telangana
+<p
+  data-en="📞 Call or WhatsApp us for appointments"
+  data-te="📞 అపాయింట్‌మెంట్ కోసం కాల్ చేయండి లేదా WhatsApp చేయండి">
+  📞 అపాయింట్‌మెంట్ కోసం కాల్ చేయండి లేదా WhatsApp చేయండి
 </p>
+  <p class="location"
+   data-en="📍 New Velmal, Telangana"
+   data-te="📍 న్యూ వెల్మల్, తెలంగాణ">
+  📍 న్యూ వెల్మల్, తెలంగాణ
+  </p>
     <a
-      class="whatsapp"
-      href="https://wa.me/918179957177">
-      💬 WhatsApp Us
+  class="whatsapp"
+  href="https://wa.me/918179957177"
+  data-en="💬 WhatsApp Us"
+  data-te="💬 WhatsApp చేయండి">
+  💬 WhatsApp చేయండి
     </a>
-
+  <a
+  class="call"
+  href="tel:+918179957177"
+  data-en="📞 Call Us"
+  data-te="📞 కాల్ చేయండి">
+  📞 కాల్ చేయండి
+  </a>
     <a
-      class="call"
-      href="tel:+918179957177">
-      📞 Call Us
-    </a>
-<a
   class="instagram"
   href="YOUR_INSTAGRAM_LINK"
-  target="_blank">
-  📸 Instagram
-</a>
+  target="_blank"
+  data-en="📸 Instagram"
+  data-te="📸 ఇన్‌స్టాగ్రామ్">
+  📸 ఇన్‌స్టాగ్రామ్
+    </a>
+
   </div>
 
 </section>
-  <footer>
+  <>
+    <footer>
 
-  <h3>Haritha's Bridal & Beauty Care</h3>
+  <h3
+    data-en="Haritha's Bridal & Beauty Care"
+    data-te="హారితాస్ బ్రైడల్ & బ్యూటీ కేర్">
+    హారితాస్ బ్రైడల్ & బ్యూటీ కేర్
+  </h3>
 
-  <p>Beauty • Bridal • Care</p>
+  <p
+    data-en="Beauty • Bridal • Care"
+    data-te="అందం • వధువు అలంకరణ • సంరక్షణ">
+    అందం • వధువు అలంకరణ • సంరక్షణ
+  </p>
 
-  <p>📍 New Velmal, Telangana</p>
+  <p
+    data-en="© 2026 Haritha's Bridal & Beauty Care"
+    data-te="© 2026 హారితాస్ బ్రైడల్ & బ్యూటీ కేర్">
+    © 2026 హారితాస్ బ్రైడల్ & బ్యూటీ కేర్
+  </p>
 
-  <p>📞 8179957177</p>
+    </footer>
 
-  <p>© 2026 Haritha's Bridal & Beauty Care</p>
-
-  <small>Made with 💗 for beautiful moments</small>
-
-  </footer>
-  
 <script>
 
 const form = document.getElementById("bookingForm");
@@ -1185,6 +1596,22 @@ window.location.href = whatsappURL;
   "Booking details are ready. Please send the WhatsApp message. 💗";
 
 });
+  function setLanguage(lang) {
+
+  const elements = document.querySelectorAll("[data-en][data-te]");
+
+  elements.forEach(function(element) {
+
+    if (lang === "te") {
+      element.textContent = element.getAttribute("data-te");
+    } else {
+      element.textContent = element.getAttribute("data-en");
+    }
+
+  });
+
+  }
+  
 
 </script>
 <a
