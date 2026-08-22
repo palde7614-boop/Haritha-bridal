@@ -259,7 +259,6 @@ section{
   font-size:12px;
   font-family:Arial,sans-serif;
 }
-.gallery-box:nth-child(2)
   .gallery-box:nth-child(2){
   background:linear-gradient(135deg,#24344f,#50698f);
   }
@@ -940,7 +939,12 @@ footer{
 }
   .gallery-box img,
 .gallery-photo{
+  width:100%;
   height:220px;
+  object-fit:contain;
+  display:block;
+  background:#fff;
+  border-radius:20px 20px 0 0;
 }
 </style>
 </head>
